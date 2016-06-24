@@ -1,0 +1,7 @@
+----- Begin Fatal Exception 23-Jun-2016 15:17:23 CEST-----------------------
+An exception of category 'ConfigFileReadError' occurred while
+   [0] Processing the python configuration file named hlt_user_data.py
+Exception Message:
+python encountered the error: <type 'exceptions.AttributeError'>
+'Process' object has no attribute 'HLTBitAnalysisFinalpath'
+----- End Fatal Exception -------------------------------------------------

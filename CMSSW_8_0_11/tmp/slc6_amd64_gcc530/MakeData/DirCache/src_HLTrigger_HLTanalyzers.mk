@@ -1,0 +1,2 @@
+ALL_PACKAGES += HLTrigger/HLTanalyzers
+subdirs_src_HLTrigger_HLTanalyzers := src_HLTrigger_HLTanalyzers_python src_HLTrigger_HLTanalyzers_src src_HLTrigger_HLTanalyzers_test

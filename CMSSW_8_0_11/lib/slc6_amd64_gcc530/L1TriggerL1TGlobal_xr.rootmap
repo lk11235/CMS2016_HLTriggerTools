@@ -1,0 +1,29 @@
+{ decls }
+namespace std {  }
+
+[ libL1TriggerL1TGlobal.so ]
+# List of selected classes
+class CaloTemplate
+class CaloTemplate::CorrelationParameter
+class CaloTemplate::ObjectParameter
+class CorrelationTemplate
+class CorrelationTemplate::CorrelationParameter
+class MuonTemplate
+class MuonTemplate::CorrelationParameter
+class MuonTemplate::ObjectParameter
+class TriggerMenu
+class vector<CaloTemplate::ObjectParameter>
+class vector<CaloTemplate>
+class vector<CorrelationTemplate>
+class vector<MuonTemplate::ObjectParameter>
+class vector<MuonTemplate>
+class vector<std::vector<CaloTemplate> >
+class vector<std::vector<CorrelationTemplate> >
+class vector<std::vector<MuonTemplate> >
+class vector<vector<CaloTemplate> >
+class vector<vector<CorrelationTemplate> >
+class vector<vector<MuonTemplate> >
+header L1Trigger/L1TGlobal/interface/CaloTemplate.h
+header L1Trigger/L1TGlobal/interface/CorrelationTemplate.h
+header L1Trigger/L1TGlobal/interface/MuonTemplate.h
+header L1Trigger/L1TGlobal/interface/TriggerMenu.h
