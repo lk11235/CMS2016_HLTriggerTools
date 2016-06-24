@@ -1,6 +1,6 @@
 tmp/slc6_amd64_gcc530/src/L1Trigger/L1TGlobal/src/L1TriggerL1TGlobal/L1TGlobalUtil.o: \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/src/L1TGlobalUtil.cc \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/L1TGlobalUtil.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/src/L1TGlobalUtil.cc \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/L1TGlobalUtil.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/CondFormats/L1TObjects/interface/L1TUtmTriggerMenu.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/CondFormats/Serialization/interface/Serializable.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/serialization/access.hpp \
@@ -686,7 +686,7 @@ tmp/slc6_amd64_gcc530/src/L1Trigger/L1TGlobal/src/L1TriggerL1TGlobal/L1TGlobalUt
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/FWCore/Framework/interface/HCMethods.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/FWCore/Framework/interface/eventSetupGetImplementation.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/FWCore/Framework/interface/NoRecordException.h \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/L1TGlobalUtilHelper.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/L1TGlobalUtilHelper.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/FWCore/Framework/interface/ConsumesCollector.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/FWCore/Framework/interface/EDConsumerBase.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/FWCore/Framework/interface/ProductHolderIndexAndSkipBit.h \

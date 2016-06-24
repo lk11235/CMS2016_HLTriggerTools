@@ -1,11 +1,11 @@
 tmp/slc6_amd64_gcc530/src/L1Trigger/L1TGlobal/src/L1TriggerL1TGlobal/TriggerMenu.o: \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/src/TriggerMenu.cc \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/TriggerMenu.h \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/TriggerMenuFwd.h \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalCondition.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/src/TriggerMenu.cc \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/TriggerMenu.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/TriggerMenuFwd.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalCondition.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/DataFormats/L1TGlobal/interface/GlobalObject.h \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalDefinitions.h \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalAlgorithm.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalDefinitions.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalAlgorithm.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/CondFormats/Serialization/interface/Serializable.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/serialization/access.hpp \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/config.hpp \
@@ -442,9 +442,9 @@ tmp/slc6_amd64_gcc530/src/L1Trigger/L1TGlobal/src/L1TriggerL1TGlobal/TriggerMenu
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/serialization/throw_exception.hpp \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/archive/archive_exception.hpp \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/DataFormats/L1TGlobal/interface/GlobalLogicParser.h \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalScales.h \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/MuonTemplate.h \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/CaloTemplate.h \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/EnergySumTemplate.h \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/ExternalTemplate.h \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/CorrelationTemplate.h
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalScales.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/MuonTemplate.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/CaloTemplate.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/EnergySumTemplate.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/ExternalTemplate.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/CorrelationTemplate.h

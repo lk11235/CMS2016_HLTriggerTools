@@ -1188,7 +1188,7 @@ namespace {
     static const char* headers[] = {
 0    };
     static const char* includePaths[] = {
-"/afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src",
+"/afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src",
 "/cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src",
 "/cvmfs/cms.cern.ch/slc6_amd64_gcc530/lcg/root/6.06.00-ikhhed4/include",
 "/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include",
@@ -1201,7 +1201,7 @@ namespace {
 "/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/xerces-c/2.8.0/include",
 "/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/zlib/1.2.8/include",
 "/cvmfs/cms.cern.ch/slc6_amd64_gcc530/lcg/root/6.06.00-ikhhed4/include",
-"/afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/",
+"/afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/",
 0
     };
     static const char* fwdDeclCode = R"DICTFWDDCLS(

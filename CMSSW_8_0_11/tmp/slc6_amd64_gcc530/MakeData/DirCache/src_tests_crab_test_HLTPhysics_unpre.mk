@@ -1,0 +1,2 @@
+ALL_PACKAGES += tests/crab_test_HLTPhysics_unpre
+subdirs_src_tests_crab_test_HLTPhysics_unpre := src_tests_crab_test_HLTPhysics_unpre_crab_HLTPhysics_MIT src_tests_crab_test_HLTPhysics_unpre_crab_HLTPhysics_FNAL

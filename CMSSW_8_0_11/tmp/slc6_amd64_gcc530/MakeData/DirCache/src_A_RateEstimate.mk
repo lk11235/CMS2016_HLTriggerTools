@@ -1,0 +1,2 @@
+ALL_PACKAGES += A/RateEstimate
+subdirs_src_A_RateEstimate := src_A_RateEstimate_datasetCrossSections src_A_RateEstimate_scripts src_A_RateEstimate_triggersGroupMap

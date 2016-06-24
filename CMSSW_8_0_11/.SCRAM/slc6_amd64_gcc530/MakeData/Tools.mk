@@ -789,8 +789,8 @@ rootxmlio_EX_LIB := XMLIO
 rootxmlio_EX_USE := rootrio
 
 ALL_TOOLS      += self
-self_EX_INCLUDE := /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/include/LCG /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/include/LCG
-self_EX_LIBDIR := /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/lib/slc6_amd64_gcc530 /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/external/slc6_amd64_gcc530/lib /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/lib/slc6_amd64_gcc530 /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/external/slc6_amd64_gcc530/lib
+self_EX_INCLUDE := /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/include/LCG /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/include/LCG
+self_EX_LIBDIR := /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/lib/slc6_amd64_gcc530 /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/external/slc6_amd64_gcc530/lib /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/lib/slc6_amd64_gcc530 /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/external/slc6_amd64_gcc530/lib
 self_EX_FLAGS_SYMLINK_DEPTH_CMSSW_SEARCH_PATH  := 2
 self_EX_FLAGS_LLVM_ANALYZER  := llvm-analyzer
 self_EX_FLAGS_SKIP_TOOLS_SYMLINK  := cxxcompiler ccompiler f77compiler gcc-cxxcompiler gcc-ccompiler gcc-f77compiler llvm-cxxcompiler llvm-ccompiler llvm-f77compiler llvm-analyzer-cxxcompiler llvm-analyzer-ccompiler icc-cxxcompiler icc-ccompiler icc-f77compiler x11 dpm
