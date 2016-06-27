@@ -9960,9 +9960,7 @@ process.HLTSchedule = cms.Schedule( *(process.HLTriggerFirstPath, process.HLT_PF
 
 process.source = cms.Source( "PoolSource",
     fileNames = cms.untracked.vstring(
-        '/store/express/Run2016C/HLTMonitor/FEVTHLTALL/Express-v2/000/275/658/00000/A028D3F0-D839-E611-9D58-02163E0118F8.root',
-        '/store/express/Run2016C/HLTMonitor/FEVTHLTALL/Express-v2/000/275/657/00000/C27F24F9-C439-E611-AE10-02163E011E19.root',
-        '/store/express/Run2016C/HLTMonitor/FEVTHLTALL/Express-v2/000/275/658/00000/2C83BD6E-CB39-E611-92AD-02163E01262A.root',
+	'root://cms-xrd-global.cern.ch///store/data/Run2016B/HLTPhysics/RAW/v2/000/274/998/00000/0065CD2D-5832-E611-A907-02163E014649.root'	
     ),
     inputCommands = cms.untracked.vstring(
         'keep *'
@@ -10060,7 +10058,7 @@ _customInfo['inputFiles'][True]  = "file:RelVal_Raw_GRun_DATA.root"
 _customInfo['inputFiles'][False] = "file:RelVal_Raw_GRun_MC.root"
 _customInfo['maxEvents' ]=  1000
 _customInfo['globalTag' ]= "80X_dataRun2_HLT_v12"
-_customInfo['inputFile' ]=  ['/store/express/Run2016C/HLTMonitor/FEVTHLTALL/Express-v2/000/275/658/00000/A028D3F0-D839-E611-9D58-02163E0118F8.root', '/store/express/Run2016C/HLTMonitor/FEVTHLTALL/Express-v2/000/275/657/00000/C27F24F9-C439-E611-AE10-02163E011E19.root', '/store/express/Run2016C/HLTMonitor/FEVTHLTALL/Express-v2/000/275/658/00000/2C83BD6E-CB39-E611-92AD-02163E01262A.root']
+_customInfo['inputFile' ]=  ['/store/data/Run2016B/HLTPhysics/RAW/v2/000/274/998/00000/0065CD2D-5832-E611-A907-02163E014649.root']
 _customInfo['realData'  ]=  True
 from HLTrigger.Configuration.customizeHLTforALL import customizeHLTforAll
 process = customizeHLTforAll(process,"GRun",_customInfo)
