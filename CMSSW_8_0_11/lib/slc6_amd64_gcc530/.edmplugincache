@@ -1,5 +1,3 @@
-pluginATriggerRatesAnalyzer.so TriggerRatesAnalyzer CMS%EDM%Framework%Module
-pluginATriggerRatesAnalyzer.so TriggerRatesAnalyzer CMS%EDM%Framework%ParameterSet%Description
 pluginConfigurationSkimming.so LeptonRecoSkim CMS%EDM%Framework%Module
 pluginConfigurationSkimming.so LeptonRecoSkim CMS%EDM%Framework%ParameterSet%Description
 pluginFastSimulationMuonsPlugins.so FastTSGFromIOHit TrackerSeedGeneratorFactory
@@ -102,3 +100,5 @@ pluginL1TriggerL1TGlobalPlugins.so l1t::GtInputDump CMS%EDM%Framework%Module
 pluginL1TriggerL1TGlobalPlugins.so l1t::GtInputDump CMS%EDM%Framework%ParameterSet%Description
 pluginL1TriggerL1TGlobalPlugins.so l1t::GtRecordDump CMS%EDM%Framework%Module
 pluginL1TriggerL1TGlobalPlugins.so l1t::GtRecordDump CMS%EDM%Framework%ParameterSet%Description
+pluginRatesAnalysisTriggerRatesAnalyzer.so TriggerRatesAnalyzer CMS%EDM%Framework%Module
+pluginRatesAnalysisTriggerRatesAnalyzer.so TriggerRatesAnalyzer CMS%EDM%Framework%ParameterSet%Description

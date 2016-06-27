@@ -85,21 +85,21 @@ L1TriggerL1TGlobal_CLASS := LIBRARY
 L1Trigger/L1TGlobal_forbigobj+=L1TriggerL1TGlobal
 L1TriggerL1TGlobal_INIT_FUNC        += $$(eval $$(call Library,L1TriggerL1TGlobal,src/L1Trigger/L1TGlobal/src,src_L1Trigger_L1TGlobal_src,$(SCRAMSTORENAME_BIN),,$(SCRAMSTORENAME_LIB),$(SCRAMSTORENAME_LOGS)))
 endif
-ifeq ($(strip $(A/TriggerRatesAnalyzer)),)
-ALL_COMMONRULES += src_A_TriggerRatesAnalyzer_src
-src_A_TriggerRatesAnalyzer_src_parent := A/TriggerRatesAnalyzer
-src_A_TriggerRatesAnalyzer_src_INIT_FUNC := $$(eval $$(call CommonProductRules,src_A_TriggerRatesAnalyzer_src,src/A/TriggerRatesAnalyzer/src,LIBRARY))
-ATriggerRatesAnalyzer := self/A/TriggerRatesAnalyzer
-A/TriggerRatesAnalyzer := ATriggerRatesAnalyzer
-ATriggerRatesAnalyzer_files := $(patsubst src/A/TriggerRatesAnalyzer/src/%,%,$(wildcard $(foreach dir,src/A/TriggerRatesAnalyzer/src ,$(foreach ext,$(SRC_FILES_SUFFIXES),$(dir)/*.$(ext)))))
-ATriggerRatesAnalyzer_BuildFile    := $(WORKINGDIR)/cache/bf/src/A/TriggerRatesAnalyzer/BuildFile
-ATriggerRatesAnalyzer_LOC_USE := self  DataFormats/Candidate DataFormats/Common DataFormats/EgammaCandidates DataFormats/HepMCCandidate DataFormats/HLTReco DataFormats/JetReco DataFormats/L1GlobalTrigger DataFormats/L1Trigger DataFormats/METReco DataFormats/MuonReco DQMServices/Core FWCore/Framework FWCore/MessageLogger FWCore/ParameterSet FWCore/ServiceRegistry HLTrigger/HLTcore rootgraphics
-ATriggerRatesAnalyzer_PRE_INIT_FUNC += $$(eval $$(call edmPlugin,ATriggerRatesAnalyzer,ATriggerRatesAnalyzer,$(SCRAMSTORENAME_LIB),src/A/TriggerRatesAnalyzer/src))
-ATriggerRatesAnalyzer_PACKAGE := self/src/A/TriggerRatesAnalyzer/src
-ALL_PRODS += ATriggerRatesAnalyzer
-ATriggerRatesAnalyzer_CLASS := LIBRARY
-A/TriggerRatesAnalyzer_forbigobj+=ATriggerRatesAnalyzer
-ATriggerRatesAnalyzer_INIT_FUNC        += $$(eval $$(call Library,ATriggerRatesAnalyzer,src/A/TriggerRatesAnalyzer/src,src_A_TriggerRatesAnalyzer_src,$(SCRAMSTORENAME_BIN),,$(SCRAMSTORENAME_LIB),$(SCRAMSTORENAME_LOGS)))
+ifeq ($(strip $(RatesAnalysis/TriggerRatesAnalyzer)),)
+ALL_COMMONRULES += src_RatesAnalysis_TriggerRatesAnalyzer_src
+src_RatesAnalysis_TriggerRatesAnalyzer_src_parent := RatesAnalysis/TriggerRatesAnalyzer
+src_RatesAnalysis_TriggerRatesAnalyzer_src_INIT_FUNC := $$(eval $$(call CommonProductRules,src_RatesAnalysis_TriggerRatesAnalyzer_src,src/RatesAnalysis/TriggerRatesAnalyzer/src,LIBRARY))
+RatesAnalysisTriggerRatesAnalyzer := self/RatesAnalysis/TriggerRatesAnalyzer
+RatesAnalysis/TriggerRatesAnalyzer := RatesAnalysisTriggerRatesAnalyzer
+RatesAnalysisTriggerRatesAnalyzer_files := $(patsubst src/RatesAnalysis/TriggerRatesAnalyzer/src/%,%,$(wildcard $(foreach dir,src/RatesAnalysis/TriggerRatesAnalyzer/src ,$(foreach ext,$(SRC_FILES_SUFFIXES),$(dir)/*.$(ext)))))
+RatesAnalysisTriggerRatesAnalyzer_BuildFile    := $(WORKINGDIR)/cache/bf/src/RatesAnalysis/TriggerRatesAnalyzer/BuildFile
+RatesAnalysisTriggerRatesAnalyzer_LOC_USE := self  DataFormats/Candidate DataFormats/Common DataFormats/EgammaCandidates DataFormats/HepMCCandidate DataFormats/HLTReco DataFormats/JetReco DataFormats/L1GlobalTrigger DataFormats/L1Trigger DataFormats/METReco DataFormats/MuonReco DQMServices/Core FWCore/Framework FWCore/MessageLogger FWCore/ParameterSet FWCore/ServiceRegistry HLTrigger/HLTcore rootgraphics
+RatesAnalysisTriggerRatesAnalyzer_PRE_INIT_FUNC += $$(eval $$(call edmPlugin,RatesAnalysisTriggerRatesAnalyzer,RatesAnalysisTriggerRatesAnalyzer,$(SCRAMSTORENAME_LIB),src/RatesAnalysis/TriggerRatesAnalyzer/src))
+RatesAnalysisTriggerRatesAnalyzer_PACKAGE := self/src/RatesAnalysis/TriggerRatesAnalyzer/src
+ALL_PRODS += RatesAnalysisTriggerRatesAnalyzer
+RatesAnalysisTriggerRatesAnalyzer_CLASS := LIBRARY
+RatesAnalysis/TriggerRatesAnalyzer_forbigobj+=RatesAnalysisTriggerRatesAnalyzer
+RatesAnalysisTriggerRatesAnalyzer_INIT_FUNC        += $$(eval $$(call Library,RatesAnalysisTriggerRatesAnalyzer,src/RatesAnalysis/TriggerRatesAnalyzer/src,src_RatesAnalysis_TriggerRatesAnalyzer_src,$(SCRAMSTORENAME_BIN),,$(SCRAMSTORENAME_LIB),$(SCRAMSTORENAME_LOGS)))
 endif
 ifeq ($(strip $(GeneratorInterface/GenFilters)),)
 ALL_COMMONRULES += src_GeneratorInterface_GenFilters_src

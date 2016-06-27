@@ -134,17 +134,14 @@ $(eval $(call Src2StoreCopy,src_L1Trigger_L1TGlobal_scripts,src/L1Trigger/L1TGlo
 ALL_COMMONRULES += src_L1Trigger_L1TGlobal_test
 src_L1Trigger_L1TGlobal_test_parent := L1Trigger/L1TGlobal
 src_L1Trigger_L1TGlobal_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_L1Trigger_L1TGlobal_test,src/L1Trigger/L1TGlobal/test,TEST))
-ALL_SUBSYSTEMS+=A
-subdirs_src_A = src_A_TriggerRatesAnalyzer src_A_RateEstimate
-ALL_PACKAGES += A/RateEstimate
-subdirs_src_A_RateEstimate := src_A_RateEstimate_datasetCrossSections src_A_RateEstimate_scripts src_A_RateEstimate_triggersGroupMap
-src_A_RateEstimate_scripts_files := $(filter-out \#% %\#,$(notdir $(wildcard $(foreach dir,$(LOCALTOP)/src/A/RateEstimate/scripts,$(dir)/*))))
-$(eval $(call Src2StoreCopy,src_A_RateEstimate_scripts,src/A/RateEstimate/scripts,$(SCRAMSTORENAME_BIN),*))
-ALL_PACKAGES += A/TriggerRatesAnalyzer
-subdirs_src_A_TriggerRatesAnalyzer := src_A_TriggerRatesAnalyzer_interface src_A_TriggerRatesAnalyzer_src src_A_TriggerRatesAnalyzer_test
-ALL_COMMONRULES += src_A_TriggerRatesAnalyzer_test
-src_A_TriggerRatesAnalyzer_test_parent := A/TriggerRatesAnalyzer
-src_A_TriggerRatesAnalyzer_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_A_TriggerRatesAnalyzer_test,src/A/TriggerRatesAnalyzer/test,TEST))
+ALL_SUBSYSTEMS+=RatesAnalysis
+subdirs_src_RatesAnalysis = src_RatesAnalysis_TriggerRatesAnalyzer src_RatesAnalysis_RateEstimate
+ALL_PACKAGES += RatesAnalysis/RateEstimate
+subdirs_src_RatesAnalysis_RateEstimate := src_RatesAnalysis_RateEstimate_scripts
+src_RatesAnalysis_RateEstimate_scripts_files := $(filter-out \#% %\#,$(notdir $(wildcard $(foreach dir,$(LOCALTOP)/src/RatesAnalysis/RateEstimate/scripts,$(dir)/*))))
+$(eval $(call Src2StoreCopy,src_RatesAnalysis_RateEstimate_scripts,src/RatesAnalysis/RateEstimate/scripts,$(SCRAMSTORENAME_BIN),*))
+ALL_PACKAGES += RatesAnalysis/TriggerRatesAnalyzer
+subdirs_src_RatesAnalysis_TriggerRatesAnalyzer := src_RatesAnalysis_TriggerRatesAnalyzer_interface src_RatesAnalysis_TriggerRatesAnalyzer_src src_RatesAnalysis_TriggerRatesAnalyzer_test
 ALL_SUBSYSTEMS+=GeneratorInterface
 subdirs_src_GeneratorInterface = src_GeneratorInterface_GenFilters
 ALL_PACKAGES += GeneratorInterface/GenFilters
@@ -192,4 +189,7 @@ src_SimGeneral_MixingModule_test_INIT_FUNC += $$(eval $$(call CommonProductRules
 ALL_SUBSYSTEMS+=tests
 subdirs_src_tests = src_tests_crab_test_HLTPhysics_unpre
 ALL_PACKAGES += tests/crab_test_HLTPhysics_unpre
-subdirs_src_tests_crab_test_HLTPhysics_unpre := src_tests_crab_test_HLTPhysics_unpre_crab_HLTPhysics_MIT src_tests_crab_test_HLTPhysics_unpre_crab_HLTPhysics_FNAL
+subdirs_src_tests_crab_test_HLTPhysics_unpre := src_tests_crab_test_HLTPhysics_unpre_crab_HLTPhysics_FNAL2
+ALL_COMMONRULES += src_RatesAnalysis_TriggerRatesAnalyzer_test
+src_RatesAnalysis_TriggerRatesAnalyzer_test_parent := RatesAnalysis/TriggerRatesAnalyzer
+src_RatesAnalysis_TriggerRatesAnalyzer_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_RatesAnalysis_TriggerRatesAnalyzer_test,src/RatesAnalysis/TriggerRatesAnalyzer/test,TEST))

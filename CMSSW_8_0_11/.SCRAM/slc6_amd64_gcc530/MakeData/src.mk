@@ -46,7 +46,7 @@ endif
 endif
 LIBTYPE:= 
 
-subdirs_src+=$(filter-out Documentation, src_GeneratorInterface src_FastSimulation src_tests src_SimGeneral src_Configuration src_RemovePileUpDominatedEvents src_HLTrigger src_L1Trigger src_A)
+subdirs_src+=$(filter-out Documentation, src_GeneratorInterface src_RatesAnalysis src_FastSimulation src_tests src_SimGeneral src_Configuration src_RemovePileUpDominatedEvents src_HLTrigger src_L1Trigger)
 
 COND_SERIALIZATION:=$(SCRAM_SOURCEDIR)/CondFormats/Serialization/python/condformats_serialization_generate.py
 EDM_WRITE_CONFIG:=edmWriteConfigs
