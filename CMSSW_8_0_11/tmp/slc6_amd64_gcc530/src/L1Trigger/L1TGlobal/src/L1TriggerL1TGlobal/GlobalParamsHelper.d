@@ -1,6 +1,6 @@
 tmp/slc6_amd64_gcc530/src/L1Trigger/L1TGlobal/src/L1TriggerL1TGlobal/GlobalParamsHelper.o: \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/src/GlobalParamsHelper.cc \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalParamsHelper.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/src/GlobalParamsHelper.cc \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalParamsHelper.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/CondFormats/L1TObjects/interface/L1TGlobalParameters.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/CondFormats/Serialization/interface/Serializable.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/serialization/access.hpp \

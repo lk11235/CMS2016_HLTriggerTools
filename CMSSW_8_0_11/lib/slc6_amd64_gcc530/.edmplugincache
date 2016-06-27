@@ -1,3 +1,5 @@
+pluginATriggerRatesAnalyzer.so TriggerRatesAnalyzer CMS%EDM%Framework%Module
+pluginATriggerRatesAnalyzer.so TriggerRatesAnalyzer CMS%EDM%Framework%ParameterSet%Description
 pluginConfigurationSkimming.so LeptonRecoSkim CMS%EDM%Framework%Module
 pluginConfigurationSkimming.so LeptonRecoSkim CMS%EDM%Framework%ParameterSet%Description
 pluginFastSimulationMuonsPlugins.so FastTSGFromIOHit TrackerSeedGeneratorFactory

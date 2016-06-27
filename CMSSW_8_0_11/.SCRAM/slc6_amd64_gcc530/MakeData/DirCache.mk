@@ -85,3 +85,70 @@ L1TriggerL1TGlobal_CLASS := LIBRARY
 L1Trigger/L1TGlobal_forbigobj+=L1TriggerL1TGlobal
 L1TriggerL1TGlobal_INIT_FUNC        += $$(eval $$(call Library,L1TriggerL1TGlobal,src/L1Trigger/L1TGlobal/src,src_L1Trigger_L1TGlobal_src,$(SCRAMSTORENAME_BIN),,$(SCRAMSTORENAME_LIB),$(SCRAMSTORENAME_LOGS)))
 endif
+ifeq ($(strip $(A/TriggerRatesAnalyzer)),)
+ALL_COMMONRULES += src_A_TriggerRatesAnalyzer_src
+src_A_TriggerRatesAnalyzer_src_parent := A/TriggerRatesAnalyzer
+src_A_TriggerRatesAnalyzer_src_INIT_FUNC := $$(eval $$(call CommonProductRules,src_A_TriggerRatesAnalyzer_src,src/A/TriggerRatesAnalyzer/src,LIBRARY))
+ATriggerRatesAnalyzer := self/A/TriggerRatesAnalyzer
+A/TriggerRatesAnalyzer := ATriggerRatesAnalyzer
+ATriggerRatesAnalyzer_files := $(patsubst src/A/TriggerRatesAnalyzer/src/%,%,$(wildcard $(foreach dir,src/A/TriggerRatesAnalyzer/src ,$(foreach ext,$(SRC_FILES_SUFFIXES),$(dir)/*.$(ext)))))
+ATriggerRatesAnalyzer_BuildFile    := $(WORKINGDIR)/cache/bf/src/A/TriggerRatesAnalyzer/BuildFile
+ATriggerRatesAnalyzer_LOC_USE := self  DataFormats/Candidate DataFormats/Common DataFormats/EgammaCandidates DataFormats/HepMCCandidate DataFormats/HLTReco DataFormats/JetReco DataFormats/L1GlobalTrigger DataFormats/L1Trigger DataFormats/METReco DataFormats/MuonReco DQMServices/Core FWCore/Framework FWCore/MessageLogger FWCore/ParameterSet FWCore/ServiceRegistry HLTrigger/HLTcore rootgraphics
+ATriggerRatesAnalyzer_PRE_INIT_FUNC += $$(eval $$(call edmPlugin,ATriggerRatesAnalyzer,ATriggerRatesAnalyzer,$(SCRAMSTORENAME_LIB),src/A/TriggerRatesAnalyzer/src))
+ATriggerRatesAnalyzer_PACKAGE := self/src/A/TriggerRatesAnalyzer/src
+ALL_PRODS += ATriggerRatesAnalyzer
+ATriggerRatesAnalyzer_CLASS := LIBRARY
+A/TriggerRatesAnalyzer_forbigobj+=ATriggerRatesAnalyzer
+ATriggerRatesAnalyzer_INIT_FUNC        += $$(eval $$(call Library,ATriggerRatesAnalyzer,src/A/TriggerRatesAnalyzer/src,src_A_TriggerRatesAnalyzer_src,$(SCRAMSTORENAME_BIN),,$(SCRAMSTORENAME_LIB),$(SCRAMSTORENAME_LOGS)))
+endif
+ifeq ($(strip $(GeneratorInterface/GenFilters)),)
+ALL_COMMONRULES += src_GeneratorInterface_GenFilters_src
+src_GeneratorInterface_GenFilters_src_parent := GeneratorInterface/GenFilters
+src_GeneratorInterface_GenFilters_src_INIT_FUNC := $$(eval $$(call CommonProductRules,src_GeneratorInterface_GenFilters_src,src/GeneratorInterface/GenFilters/src,LIBRARY))
+GeneratorInterfaceGenFilters := self/GeneratorInterface/GenFilters
+GeneratorInterface/GenFilters := GeneratorInterfaceGenFilters
+GeneratorInterfaceGenFilters_files := $(patsubst src/GeneratorInterface/GenFilters/src/%,%,$(wildcard $(foreach dir,src/GeneratorInterface/GenFilters/src ,$(foreach ext,$(SRC_FILES_SUFFIXES),$(dir)/*.$(ext)))))
+GeneratorInterfaceGenFilters_BuildFile    := $(WORKINGDIR)/cache/bf/src/GeneratorInterface/GenFilters/BuildFile
+GeneratorInterfaceGenFilters_LOC_USE := self  boost FWCore/PluginManager FWCore/ParameterSet FWCore/Framework FWCore/Utilities SimDataFormats/GeneratorProducts heppdt clhep root GeneratorInterface/Pythia6Interface GeneratorInterface/Core SimGeneral/HepPDTRecord DataFormats/GeometryVector DataFormats/GeometrySurface TrackPropagation/SteppingHelixPropagator MagneticField/Records TrackingTools/TrajectoryState TrackingTools/TrajectoryParametrization TrackingTools/Records CommonTools/UtilAlgos FWCore/ServiceRegistry FastSimulation/Particle FastSimulation/BaseParticlePropagator TrackingTools/GeomPropagators DataFormats/HepMCCandidate DataFormats/JetReco DataFormats/EgammaReco
+GeneratorInterfaceGenFilters_PRE_INIT_FUNC += $$(eval $$(call edmPlugin,GeneratorInterfaceGenFilters,GeneratorInterfaceGenFilters,$(SCRAMSTORENAME_LIB),src/GeneratorInterface/GenFilters/src))
+GeneratorInterfaceGenFilters_PACKAGE := self/src/GeneratorInterface/GenFilters/src
+ALL_PRODS += GeneratorInterfaceGenFilters
+GeneratorInterfaceGenFilters_CLASS := LIBRARY
+GeneratorInterface/GenFilters_forbigobj+=GeneratorInterfaceGenFilters
+GeneratorInterfaceGenFilters_INIT_FUNC        += $$(eval $$(call Library,GeneratorInterfaceGenFilters,src/GeneratorInterface/GenFilters/src,src_GeneratorInterface_GenFilters_src,$(SCRAMSTORENAME_BIN),,$(SCRAMSTORENAME_LIB),$(SCRAMSTORENAME_LOGS)))
+endif
+ifeq ($(strip $(SimGeneralMixingModulePlugins)),)
+SimGeneralMixingModulePlugins := self/src/SimGeneral/MixingModule/plugins
+PLUGINS:=yes
+SimGeneralMixingModulePlugins_files := $(patsubst src/SimGeneral/MixingModule/plugins/%,%,$(foreach file,*.cc,$(eval xfile:=$(wildcard src/SimGeneral/MixingModule/plugins/$(file)))$(if $(xfile),$(xfile),$(warning No such file exists: src/SimGeneral/MixingModule/plugins/$(file). Please fix src/SimGeneral/MixingModule/plugins/BuildFile.))))
+SimGeneralMixingModulePlugins_BuildFile    := $(WORKINGDIR)/cache/bf/src/SimGeneral/MixingModule/plugins/BuildFile
+SimGeneralMixingModulePlugins_LOC_USE := self  DataFormats/Common DataFormats/Provenance FWCore/Framework FWCore/MessageLogger FWCore/ParameterSet FWCore/ServiceRegistry FWCore/Utilities FWCore/PluginManager Mixing/Base SimDataFormats/CaloHit SimDataFormats/CrossingFrame SimDataFormats/Track SimDataFormats/TrackingHit SimDataFormats/Vertex SimDataFormats/GeneratorProducts SimCalorimetry/HcalSimProducers SimGeneral/MixingModule clhep CondFormats/DataRecord CondFormats/RunInfo CondCore/DBOutputService DataFormats/TrackerRecHit2D
+SimGeneralMixingModulePlugins_PRE_INIT_FUNC += $$(eval $$(call edmPlugin,SimGeneralMixingModulePlugins,SimGeneralMixingModulePlugins,$(SCRAMSTORENAME_LIB),src/SimGeneral/MixingModule/plugins))
+SimGeneralMixingModulePlugins_PACKAGE := self/src/SimGeneral/MixingModule/plugins
+ALL_PRODS += SimGeneralMixingModulePlugins
+SimGeneral/MixingModule_forbigobj+=SimGeneralMixingModulePlugins
+SimGeneralMixingModulePlugins_INIT_FUNC        += $$(eval $$(call Library,SimGeneralMixingModulePlugins,src/SimGeneral/MixingModule/plugins,src_SimGeneral_MixingModule_plugins,$(SCRAMSTORENAME_BIN),,$(SCRAMSTORENAME_LIB),$(SCRAMSTORENAME_LOGS)))
+SimGeneralMixingModulePlugins_CLASS := LIBRARY
+else
+$(eval $(call MultipleWarningMsg,SimGeneralMixingModulePlugins,src/SimGeneral/MixingModule/plugins))
+endif
+ALL_COMMONRULES += src_SimGeneral_MixingModule_plugins
+src_SimGeneral_MixingModule_plugins_parent := SimGeneral/MixingModule
+src_SimGeneral_MixingModule_plugins_INIT_FUNC += $$(eval $$(call CommonProductRules,src_SimGeneral_MixingModule_plugins,src/SimGeneral/MixingModule/plugins,PLUGINS))
+ifeq ($(strip $(SimGeneral/MixingModule)),)
+ALL_COMMONRULES += src_SimGeneral_MixingModule_src
+src_SimGeneral_MixingModule_src_parent := SimGeneral/MixingModule
+src_SimGeneral_MixingModule_src_INIT_FUNC := $$(eval $$(call CommonProductRules,src_SimGeneral_MixingModule_src,src/SimGeneral/MixingModule/src,LIBRARY))
+SimGeneralMixingModule := self/SimGeneral/MixingModule
+SimGeneral/MixingModule := SimGeneralMixingModule
+SimGeneralMixingModule_files := $(patsubst src/SimGeneral/MixingModule/src/%,%,$(wildcard $(foreach dir,src/SimGeneral/MixingModule/src ,$(foreach ext,$(SRC_FILES_SUFFIXES),$(dir)/*.$(ext)))))
+SimGeneralMixingModule_BuildFile    := $(WORKINGDIR)/cache/bf/src/SimGeneral/MixingModule/BuildFile
+SimGeneralMixingModule_LOC_USE := self  FWCore/PluginManager FWCore/ParameterSet
+SimGeneralMixingModule_EX_LIB   := SimGeneralMixingModule
+SimGeneralMixingModule_EX_USE   := $(foreach d,$(SimGeneralMixingModule_LOC_USE),$(if $($(d)_EX_FLAGS_NO_RECURSIVE_EXPORT),,$d))
+SimGeneralMixingModule_PACKAGE := self/src/SimGeneral/MixingModule/src
+ALL_PRODS += SimGeneralMixingModule
+SimGeneralMixingModule_CLASS := LIBRARY
+SimGeneral/MixingModule_forbigobj+=SimGeneralMixingModule
+SimGeneralMixingModule_INIT_FUNC        += $$(eval $$(call Library,SimGeneralMixingModule,src/SimGeneral/MixingModule/src,src_SimGeneral_MixingModule_src,$(SCRAMSTORENAME_BIN),,$(SCRAMSTORENAME_LIB),$(SCRAMSTORENAME_LOGS)))
+endif

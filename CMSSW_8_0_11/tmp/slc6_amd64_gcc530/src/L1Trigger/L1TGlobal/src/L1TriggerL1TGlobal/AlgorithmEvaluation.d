@@ -1,6 +1,6 @@
 tmp/slc6_amd64_gcc530/src/L1Trigger/L1TGlobal/src/L1TriggerL1TGlobal/AlgorithmEvaluation.o: \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/src/AlgorithmEvaluation.cc \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/AlgorithmEvaluation.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/src/AlgorithmEvaluation.cc \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/AlgorithmEvaluation.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/DataFormats/L1TGlobal/interface/GlobalLogicParser.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/cstdint.hpp \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/config.hpp \
@@ -408,7 +408,7 @@ tmp/slc6_amd64_gcc530/src/L1Trigger/L1TGlobal/src/L1TriggerL1TGlobal/AlgorithmEv
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/algorithm/string/formatter.hpp \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/algorithm/string/detail/formatter.hpp \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/algorithm/string/erase.hpp \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalAlgorithm.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/GlobalAlgorithm.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/CondFormats/Serialization/interface/Serializable.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/serialization/access.hpp \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/serialization/pfto.hpp \
@@ -624,7 +624,7 @@ tmp/slc6_amd64_gcc530/src/L1Trigger/L1TGlobal/src/L1TriggerL1TGlobal/AlgorithmEv
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/serialization/config.hpp \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/serialization/throw_exception.hpp \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/boost/1.57.0-ikhhed/include/boost/archive/archive_exception.hpp \
- /afs/cern.ch/user/l/lkang/diphoton/rates/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/ConditionEvaluation.h \
+ /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/L1Trigger/L1TGlobal/interface/ConditionEvaluation.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/FWCore/MessageLogger/interface/MessageLogger.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/FWCore/MessageLogger/interface/MessageSender.h \
  /cvmfs/cms.cern.ch/slc6_amd64_gcc530/cms/cmssw/CMSSW_8_0_11/src/FWCore/MessageLogger/interface/ELstring.h \
