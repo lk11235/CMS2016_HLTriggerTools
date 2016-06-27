@@ -4379,10 +4379,18 @@ process.hltGetConditions = cms.EDAnalyzer( "EventSetupRecordDataGetter",
 process.hltGetRaw = cms.EDAnalyzer( "HLTGetRaw",
     RawDataCollection = cms.InputTag( "rawDataCollector" )
 )
-# changing all instances of hltBoolFalse to hltBoolTrue; 
-# otherwise HLTriggerFirstPath and HLTriggerFinalPath do not accept ANY events  
-process.hltBoolTrue = cms.EDFilter( "HLTBool",
-    result = cms.bool( True )
+
+# if hltBoolFalse HLTriggerFirstPath and HLTriggerFinalPath do not accept ANY events 
+# if hltBoolTrue, HLTriggerFirstPath and HLTriggerFinalPath accept ALL events
+# HLT_ZeroBias_v* works as a dumpster: if an event is rejected by all other triggers, 
+# it goes to HLT_ZeroBias; otherwise it is rejected by HLT_ZeroBias. The rate estimate 
+# script that we are using relies on HLT_ZeroBias to get the total count of events and 
+# thus obtain an accurate RateEstimate. Hence it makes sense that the first and final 
+# path reject all events: then the total count is restored with HLT_ZeroBias, since 
+# all events are either accepted by the triggers of interest, or by  HLT_ZeroBias.
+# Therefore, setting all hltBools to False...  
+process.hltBoolFalse = cms.EDFilter( "HLTBool",
+    result = cms.bool( False )
 )
 process.hltTriggerType = cms.EDFilter( "HLTTriggerTypeFilter",
     SelectedTriggerType = cms.int32( 1 )
@@ -9938,13 +9946,13 @@ process.HLTIterativeTrackingForBTagIteration2 = cms.Sequence( process.hltIter2Cl
 process.HLTIterativeTrackingForBTagIter02 = cms.Sequence( process.HLTIterativeTrackingForBTagIteration0 + process.HLTIterativeTrackingForBTagIteration1 + process.hltIter1MergedForBTag + process.HLTIterativeTrackingForBTagIteration2 + process.hltIter2MergedForBTag )
 process.HLTBtagCSVSequenceL3 = cms.Sequence( process.hltSelectorJets30L1FastJet + process.hltSelectorCentralJets30L1FastJeta + process.hltSelector8CentralJetsL1FastJet + process.HLTDoLocalPixelSequenceRegForBTag + process.HLTDoLocalStripSequenceRegForBTag + process.HLTIterativeTrackingForBTagIter02 + process.hltVerticesL3 + process.hltFastPixelBLifetimeL3Associator + process.hltImpactParameterTagInfos + process.hltInclusiveVertexFinder + process.hltInclusiveSecondaryVertices + process.hltTrackVertexArbitrator + process.hltInclusiveMergedVertices + process.hltInclusiveSecondaryVertexFinderTagInfos + process.hltCombinedSecondaryVertexBJetTagsCalo )
 
-process.HLTriggerFirstPath = cms.Path( process.hltGetConditions + process.hltGetRaw + process.hltBoolTrue )
+process.HLTriggerFirstPath = cms.Path( process.hltGetConditions + process.hltGetRaw + process.hltBoolFalse )
 process.HLT_PFJet80_v5 = cms.Path( process.HLTBeginSequence + process.hltL1sSingleJet60 + process.hltPrePFJet80 + process.HLTAK4CaloJetsSequence + process.hltSingleCaloJet50 + process.HLTAK4PFJetsSequence + process.hltPFJetsCorrectedMatchedToCaloJets50 + process.hltSinglePFJet80 + process.HLTEndSequence )
 process.HLT_DiPFJetAve80_v3 = cms.Path( process.HLTBeginSequence + process.hltL1sSingleJet60 + process.hltPreDiPFJetAve80 + process.HLTAK4CaloJetsSequence + process.hltDiCaloJetAve60 + process.HLTAK4PFJetsSequence + process.hltDiPFJetAve80 + process.HLTEndSequence )
 process.HLT_DoubleJetsC100_DoubleBTagCSV_p026_DoublePFJetsC160_v2 = cms.Path( process.HLTBeginSequence + process.hltL1sDoubleJetC100 + process.hltPreDoubleJetsC100DoubleBTagCSVp026DoublePFJetsC160 + process.HLTAK4CaloJetsSequence + process.hltDoubleJetsC100 + process.HLTFastPrimaryVertexSequence + process.hltSelectorJets80L1FastJet + process.hltSelectorCentralJets80L1FastJet + process.hltSelector6CentralJetsL1FastJet + process.HLTBtagCSVSequenceL3 + process.hltBTagCaloCSVp026DoubleWithMatching + process.HLTAK4PFJetsSequence + process.hltDoublePFJetsC160 + process.HLTEndSequence )
 process.HLT_DoubleJetsC100_DoubleBTagCSV_p014_DoublePFJetsC100MaxDeta1p6_v2 = cms.Path( process.HLTBeginSequence + process.hltL1sDoubleJetC100 + process.hltPreDoubleJetsC100DoubleBTagCSVp014DoublePFJetsC100MaxDeta1p6 + process.HLTAK4CaloJetsSequence + process.hltDoubleJetsC100 + process.HLTFastPrimaryVertexSequence + process.hltSelectorJets80L1FastJet + process.hltSelectorCentralJets80L1FastJet + process.hltSelector6CentralJetsL1FastJet + process.HLTBtagCSVSequenceL3 + process.hltBTagCaloCSVp014DoubleWithMatching + process.HLTAK4PFJetsSequence + process.hltDoublePFJetsC100 + process.hltDoublePFJetsC100MaxDeta1p6 + process.HLTEndSequence )
 process.HLT_ZeroBias_v4 = cms.Path( process.HLTBeginSequence + process.hltL1sZeroBias + process.hltPreZeroBias + process.HLTEndSequence )
-process.HLTriggerFinalPath = cms.Path( process.hltGtStage2Digis + process.hltScalersRawToDigi + process.hltFEDSelector + process.hltTriggerSummaryAOD + process.hltTriggerSummaryRAW + process.hltBoolTrue )
+process.HLTriggerFinalPath = cms.Path( process.hltGtStage2Digis + process.hltScalersRawToDigi + process.hltFEDSelector + process.hltTriggerSummaryAOD + process.hltTriggerSummaryRAW + process.hltBoolFalse )
 
 
 process.HLTSchedule = cms.Schedule( *(process.HLTriggerFirstPath, process.HLT_PFJet80_v5, process.HLT_DiPFJetAve80_v3, process.HLT_DoubleJetsC100_DoubleBTagCSV_p026_DoublePFJetsC160_v2, process.HLT_DoubleJetsC100_DoubleBTagCSV_p014_DoublePFJetsC100MaxDeta1p6_v2, process.HLT_ZeroBias_v4, process.HLTriggerFinalPath, process.HLTBitAnalysisEndpath ))
