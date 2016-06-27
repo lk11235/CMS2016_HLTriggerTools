@@ -1,0 +1,2 @@
+ALL_SUBSYSTEMS+=A
+subdirs_src_A = src_A_TriggerRatesAnalyzer src_A_RateEstimate

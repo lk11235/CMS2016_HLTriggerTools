@@ -1,0 +1,4 @@
+tmp/slc6_amd64_gcc530/src/A/TriggerRatesAnalyzer/src/ATriggerRatesAnalyzer/TriggerRatesAnalyzer.o: \
+ src/A/TriggerRatesAnalyzer/src/TriggerRatesAnalyzer.cc \
+ src/A/TriggerRatesAnalyzer/src/../interface/TriggerRatesAnalyzer.h \
+

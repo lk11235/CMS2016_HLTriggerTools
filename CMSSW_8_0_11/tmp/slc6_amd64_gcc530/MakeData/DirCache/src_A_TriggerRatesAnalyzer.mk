@@ -1,0 +1,2 @@
+ALL_PACKAGES += A/TriggerRatesAnalyzer
+subdirs_src_A_TriggerRatesAnalyzer := src_A_TriggerRatesAnalyzer_interface src_A_TriggerRatesAnalyzer_src src_A_TriggerRatesAnalyzer_test
