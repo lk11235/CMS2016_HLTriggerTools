@@ -36,7 +36,7 @@ config.Data.ignoreLocality = True
 # config.Data.publication = True
 config.Data.publication = False
 config.JobType.outputFiles = ['hltbits.root'] #,'DQMIO.root']
-config.Site.storageSite = 'T2_US_MIT'
+config.Site.storageSite = 'T3_US_FNALLPC'
 
 listOfSamples = ['HLTPhysics']
 # listOfSamples = ['QCDEM15','QCDEM20','QCDEM30','QCDEM50','QCDEM80','QCDEM120','QCDMu15','QCDMu20','QCDMu30','QCDMu50','QCDMu80','QCDMu120','QCD15','QCD30','QCD50','QCD80','QCD120','QCD170','QCD300','QCD470','DYToLL','WJets']
@@ -50,5 +50,5 @@ for sample in listOfSamples:
 	config.Data.outputDatasetTag = sample
 # Commenting out a lumiMask -- it may cause the crab job to fail
 #	config.Data.lumiMask = 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions16/13TeV/Cert_271036-275125_13TeV_PromptReco_Collisions16_JSON.txt' 
-	config.Data.outLFNDirBase = '/store/user/aavkhadi/' + name
+	config.Data.outLFNDirBase = '/store/user/lkang/' + name
 	submit(config)
