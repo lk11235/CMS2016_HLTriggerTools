@@ -4,7 +4,7 @@
 # #
 ###########################
 dataset = {
-'HLTPhysics' : '/HLTPhysics/Run2016C-v2/RAW'
+'HLTPhysics' : '/HLTPhysics/Run2016B-v1/RAW'
 }
 
 nfiles = {
@@ -24,7 +24,7 @@ def submit(config):
 from CRABClient.UserUtilities import config
 config = config()
 
-name = 'test_HLTPhysics_unpre'
+name = 'test_HLTPhysicsB_unpre'
 config.General.workArea = 'crab_'+name
 config.General.transferLogs = True
 # config.General.transferOutputs = True
@@ -32,6 +32,7 @@ config.JobType.pluginName = 'Analysis'
 config.JobType.psetName = 'hlt.py'
 config.Data.inputDBS = 'global'
 config.Data.splitting = 'FileBased' 
+config.Data.ignoreLocality = True
 # config.Data.publication = True
 config.Data.publication = False
 config.JobType.outputFiles = ['hltbits.root'] #,'DQMIO.root']
