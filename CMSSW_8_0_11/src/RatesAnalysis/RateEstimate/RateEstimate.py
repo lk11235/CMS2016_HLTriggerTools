@@ -4,11 +4,11 @@
 ########## Configuration #####################################################################
 #from triggersGroupMap.triggersGroupMap__frozen_2015_25ns14e33_v4p4_HLT_V1 import *
 #from triggersGroupMap.triggersGroupMap_GRun_V58_modifiable import *
-from triggersGroupMap.triggersMap_GRun_V97 import *
-from STEAMprescale_5e33_Map import *
+from triggersGroupMap.triggersGroupMap_GRun_V131_modifiable import *
+#from STEAMprescale_5e33_Map import *
 #from datasetCrossSections.datasetCrossSectionsPhys14 import *
 #from datasetCrossSections.datasetCrossSectionsSpring15_updatedFilterEff import *
-from datasetCrossSections.datasetCrossSectionsHLTPhysics import *
+from datasetCrossSections.datasetLumiSectionsData_v131 import *
 #from datasetCrossSections.datasetLumiSectionsData import *
 
 batchSplit = True
@@ -31,7 +31,8 @@ if batchSplit:
 #folder = '/store/group/dpg_trigger/comm_trigger/TriggerStudiesGroup/STEAM/HLTPhysics/HLTRates_2e33_25ns_V4p4_V1_georgia2' 
 #folder = '/store/group/dpg_trigger/comm_trigger/TriggerStudiesGroup/STEAM/Spring15/Hui_HLTRates_2e33_25ns_V4p4_V1'
 #folder = '/afs/cern.ch/user/v/vannerom/eos/cms/store/group/dpg_trigger/comm_trigger/TriggerStudiesGroup/STEAM/Spring15/Hui_HLTRates_2e33_25ns_V4p4_V1_last_round_perhaps'
-folder = '/store/group/dpg_trigger/comm_trigger/TriggerStudiesGroup/STEAM/Run2016B/HLTPhysics_HLTRates_GRunV97_unprescaled_Run2016_run273725'
+#folder = '/store/group/dpg_trigger/comm_trigger/TriggerStudiesGroup/STEAM/Run2016B/HLTPhysics_HLTRates_GRunV97_unprescaled_Run2016_run273725'
+folder = '/eos/uscms/store/user/lkang/HLTPhysics_Run274998/HLTPhysics/'
 lumi = 1              # luminosity [s-1cm-2]
 if (batchSplit): multiprocess = 1           # number of processes
 else: multiprocess = 1 # 8 multiprocessing disbaled for now because of incompatibilities with the way the files are accessed. Need some development.
@@ -41,23 +42,23 @@ pileupFilter = False        # use pile-up filter?
 pileupFilterGen = False    # use pile-up filter gen or L1?
 useEMEnriched = False       # use plain QCD mu-enriched samples (Pt30to170)?
 useMuEnriched = False       # use plain QCD EM-enriched samples (Pt30to170)?
-evalL1 = False              # evaluate L1 triggers rates?
-evalHLTpaths = False        # evaluate HLT triggers rates?
+evalL1 = True              # evaluate L1 triggers rates?
+evalHLTpaths = True        # evaluate HLT triggers rates?
 evalHLTgroups = True       # evaluate HLT triggers groups rates and global HLT and L1 rates
 evalHLTprimaryDatasets = False # evaluate HLT triggers primary datasets rates and global HLT and L1 rates
 #evalHLTtwopaths = True    # evaluate the correlation among the HLT trigger paths rates?
 evalHLTtwogroups = False   # evaluate the correlation among the HLT trigger groups rates?
-label = "rates_GRun_V97"         # name of the output files
-runNo = "273725"           #if runNo='0', means code will run for all Run.
+label = "rates_GRun_V131"         # name of the output files
+runNo = "274998"           #if runNo='0', means code will run for all Run.
 
 
 isData = True
 ## L1Rate studies as a function of PU and number of bunches:
 evalL1scaling = False
 
-nLS = 521 ## number of Lumi Sections run over data
-lenLS = 23.31 ## length of Lumi Section
-psNorm = 9000*(5./3.5) #232./4. # Prescale Normalization factor if running on HLTPhysics
+nLS = 719 ## number of Lumi Sections run over data
+lenLS = 23.3 ## length of Lumi Section
+psNorm = 720 #232./4. # Prescale Normalization factor if running on HLTPhysics
 ###############################################################################################
 
 ## log level

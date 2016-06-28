@@ -7,7 +7,7 @@
 from CRABClient.UserUtilities import config, getUsernameFromSiteDB
 config = config()
 
-name = 'HLTPhysics' # will be part of the work area name and the storage subdir name
+name = 'HLTPhysics2' # will be part of the work area name and the storage subdir name
 runNom = 274998     # the only run number I am getting the files from
 
 # For information on config parameters, see
