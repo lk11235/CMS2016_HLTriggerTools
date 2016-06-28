@@ -32,7 +32,7 @@ if batchSplit:
 #folder = '/store/group/dpg_trigger/comm_trigger/TriggerStudiesGroup/STEAM/Spring15/Hui_HLTRates_2e33_25ns_V4p4_V1'
 #folder = '/afs/cern.ch/user/v/vannerom/eos/cms/store/group/dpg_trigger/comm_trigger/TriggerStudiesGroup/STEAM/Spring15/Hui_HLTRates_2e33_25ns_V4p4_V1_last_round_perhaps'
 #folder = '/store/group/dpg_trigger/comm_trigger/TriggerStudiesGroup/STEAM/Run2016B/HLTPhysics_HLTRates_GRunV97_unprescaled_Run2016_run273725'
-folder = '/eos/uscms/store/user/lkang/HLTPhysics_Run274998/HLTPhysics/'
+folder = '/afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/crabjobs/HLTPhysics_Run274998/HLTPhysics'
 lumi = 1              # luminosity [s-1cm-2]
 if (batchSplit): multiprocess = 1           # number of processes
 else: multiprocess = 1 # 8 multiprocessing disbaled for now because of incompatibilities with the way the files are accessed. Need some development.
