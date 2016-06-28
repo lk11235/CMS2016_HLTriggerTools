@@ -27,13 +27,14 @@ config.JobType.outputFiles = ['hltbits.root']
 # section Data
 config.Data.inputDataset = '/HLTPhysics/Run2016B-v2/RAW'
 config.Data.splitting = 'LumiBased'
-config.Data.unitsPerJob = 10
+config.Data.unitsPerJob = 71  # use crab submit --dryrun *.py to find optimal splitting 
 config.Data.lumiMask = 'lumimask_Run274998.txt' # specifes good lumi sections to be used
 config.Data.totalUnits = -1 # analyze all events after applying the lumi mask
 config.Data.runRange = str( runNom )
 config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromSiteDB()) + '/' + name + '_Run' + str( runNom )
+config.Data.publication = False # no need to publish the results
 config.Data.outputDatasetTag = name
 config.Data.ignoreLocality = True
 
 # section Site
-config.Site.storageSite = 'T3_US_FNALLPC'
+config.Site.storageSite = 'T3_US_MIT'
