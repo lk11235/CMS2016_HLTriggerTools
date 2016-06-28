@@ -24,7 +24,7 @@ def submit(config):
 from CRABClient.UserUtilities import config
 config = config()
 
-name = 'test_HLTPhysicsB_unpre'
+name = 'test_HLTPhysicsB_unpre_hltBoolFalse'
 config.General.workArea = 'crab_'+name
 config.General.transferLogs = True
 # config.General.transferOutputs = True

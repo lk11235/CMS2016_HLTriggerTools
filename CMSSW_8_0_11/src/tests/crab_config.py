@@ -1,8 +1,8 @@
-###########################
-##
-# HLTPhysics Run 2016B #
-# #
-###########################
+############################
+#                          #
+#   HLTPhysics Run 2016B   #
+#                          #
+############################
 
 from CRABClient.UserUtilities import config, getUsernameFromSiteDB
 config = config()
@@ -37,4 +37,4 @@ config.Data.outputDatasetTag = name
 config.Data.ignoreLocality = True
 
 # section Site
-config.Site.storageSite = 'T3_US_MIT'
+config.Site.storageSite = 'T3_US_FNALLPC'

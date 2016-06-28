@@ -1,0 +1,194 @@
+DEBUG 2016-06-27 16:32:25,034: 	 Executing command: 'submit'
+DEBUG 2016-06-27 16:32:25,034: 	 Found CRAB cache file /afs/cern.ch/user/l/lkang/.crab3
+DEBUG 2016-06-27 16:32:25,041: 	 Checking credentials
+DEBUG 2016-06-27 16:32:25,041: 	 Found proxy file /tmp/x509up_u93955
+DEBUG 2016-06-27 16:32:25,041: 	 Getting proxy life time left
+DEBUG 2016-06-27 16:32:25,749: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -timeleft
+ output : 80245
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:32:26,556: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -actimeleft
+ output : 80244
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:32:26,556: 	 Proxy valid for 22:17:25 hours
+ERROR 2016-06-27 16:32:26,556: 	 CRAB configuration file crabConfig.py not found.
+ERROR 2016-06-27 16:32:26,557: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 295, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 46, in loadConfig
+    raise ConfigurationException("CRAB configuration file %s not found." % (configname))
+ConfigurationException: CRAB configuration file crabConfig.py not found.
+DEBUG 2016-06-27 16:32:43,540: 	 Executing command: 'submit'
+DEBUG 2016-06-27 16:32:43,541: 	 Found CRAB cache file /afs/cern.ch/user/l/lkang/.crab3
+DEBUG 2016-06-27 16:32:43,582: 	 Checking credentials
+DEBUG 2016-06-27 16:32:43,583: 	 Found proxy file /tmp/x509up_u93955
+DEBUG 2016-06-27 16:32:43,583: 	 Getting proxy life time left
+DEBUG 2016-06-27 16:32:44,290: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -timeleft
+ output : 80226
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:32:44,896: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -actimeleft
+ output : 80226
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:32:44,896: 	 Proxy valid for 22:17:06 hours
+ERROR 2016-06-27 16:32:44,896: 	 CRAB configuration file crabConfig.py not found.
+ERROR 2016-06-27 16:32:44,896: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 295, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 46, in loadConfig
+    raise ConfigurationException("CRAB configuration file %s not found." % (configname))
+ConfigurationException: CRAB configuration file crabConfig.py not found.
+DEBUG 2016-06-27 16:32:55,475: 	 Executing command: 'submit'
+DEBUG 2016-06-27 16:32:55,475: 	 Found CRAB cache file /afs/cern.ch/user/l/lkang/.crab3
+DEBUG 2016-06-27 16:32:55,483: 	 Checking credentials
+DEBUG 2016-06-27 16:32:55,483: 	 Found proxy file /tmp/x509up_u93955
+DEBUG 2016-06-27 16:32:55,483: 	 Getting proxy life time left
+DEBUG 2016-06-27 16:32:56,189: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -timeleft
+ output : 80214
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:32:56,918: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -actimeleft
+ output : 80214
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:32:56,918: 	 Proxy valid for 22:16:54 hours
+ERROR 2016-06-27 16:32:56,918: 	 CRAB configuration file crabConfig.py not found.
+ERROR 2016-06-27 16:32:56,919: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 295, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 46, in loadConfig
+    raise ConfigurationException("CRAB configuration file %s not found." % (configname))
+ConfigurationException: CRAB configuration file crabConfig.py not found.
+DEBUG 2016-06-27 16:40:27,377: 	 Executing command: 'tasks'
+DEBUG 2016-06-27 16:40:27,378: 	 Found CRAB cache file /afs/cern.ch/user/l/lkang/.crab3
+DEBUG 2016-06-27 16:40:27,392: 	 Checking credentials
+DEBUG 2016-06-27 16:40:27,392: 	 Found proxy file /tmp/x509up_u93955
+DEBUG 2016-06-27 16:40:27,392: 	 Getting proxy life time left
+DEBUG 2016-06-27 16:40:28,097: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -timeleft
+ output : 86095
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:40:28,702: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -actimeleft
+ output : 86095
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:40:28,702: 	 Proxy valid for 23:54:55 hours
+DEBUG 2016-06-27 16:40:28,816: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=lkang/CN=803706/CN=Lucas Kang
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:40:28,816: 	 Checking credentials
+DEBUG 2016-06-27 16:40:28,816: 	 Found proxy file /tmp/x509up_u93955
+DEBUG 2016-06-27 16:40:28,816: 	 Getting proxy life time left
+DEBUG 2016-06-27 16:40:29,423: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -timeleft
+ output : 86094
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:40:30,033: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -actimeleft
+ output : 86094
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:40:30,033: 	 Proxy valid for 23:54:54 hours
+DEBUG 2016-06-27 16:40:30,551: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+DEBUG 2016-06-27 16:40:30,670: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=lkang/CN=803706/CN=Lucas Kang
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:40:30,671: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-06-27 16:40:30,671: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=lkang/CN=803706/CN=Lucas Kang_cmsweb.cern.ch for credential name
+DEBUG 2016-06-27 16:40:31,175: 	 Executing : 
+ command : myproxy-info -l c2aa2a38b4149a1958689f9c94f94596a2d3dfba -s myproxy.cern.ch
+ output : username: c2aa2a38b4149a1958689f9c94f94596a2d3dfba
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=lkang/CN=803706/CN=Lucas Kang
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  timeleft: 715:12:15  (29.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:40:31,177: 	 Myproxy is valid: 2574735
+DEBUG 2016-06-27 16:40:31,177: 	 Command use: tasks
+DEBUG 2016-06-27 16:40:31,177: 	 Options use: []
+DEBUG 2016-06-27 16:40:31,711: 	 CRABClient version: 3.3.1606
+DEBUG 2016-06-27 16:40:31,711: 	 Instance is prod
+DEBUG 2016-06-27 16:40:31,711: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-06-27 16:40:31,711: 	 Command url /crabserver/prod/workflow
+INFO 2016-06-27 16:40:32,802: 	 
+List of tasks from 2016-05-28 until 2016-06-27
+INFO 2016-06-27 16:40:32,802: 	 ================================================================================
+INFO 2016-06-27 16:40:32,802: 	 NAME								STATUS
+INFO 2016-06-27 16:40:32,802: 	 ================================================================================
+INFO 2016-06-27 16:40:32,803: 	 160627_143924:lkang_crab_HLTPhysics
+								SUBMITTED
+INFO 2016-06-27 16:40:32,804: 	 --------------------------------------------------------------------------------
+INFO 2016-06-27 16:40:32,804: 	 160627_095431:lkang_crab_HLTPhysics
+								SUBMITTED
+INFO 2016-06-27 16:40:32,804: 	 --------------------------------------------------------------------------------
+INFO 2016-06-27 16:40:32,804: 	 160624_143116:lkang_crab_HLTPhysics
+								SUBMITFAILED
+INFO 2016-06-27 16:40:32,804: 	 --------------------------------------------------------------------------------
+INFO 2016-06-27 16:40:32,804: 	 160624_130649:lkang_crab_HLTPhysics
+								SUBMITFAILED
+INFO 2016-06-27 16:40:32,804: 	 --------------------------------------------------------------------------------
+INFO 2016-06-27 16:40:32,804: 	 160624_130159:lkang_crab_HLTPhysics
+								SUBMITFAILED
+INFO 2016-06-27 16:40:32,804: 	 --------------------------------------------------------------------------------
+INFO 2016-06-27 16:40:32,804: 	 160624_125618:lkang_crab_HLTPhysics
+								SUBMITFAILED
+INFO 2016-06-27 16:40:32,804: 	 --------------------------------------------------------------------------------
+INFO 2016-06-27 16:40:32,804: 	 160612_153649:lkang_crab_CMSDAS_Data_analysis_test0
+								SUBMITTED
+INFO 2016-06-27 16:40:32,806: 	 --------------------------------------------------------------------------------
+INFO 2016-06-27 16:40:32,807: 	 160612_150600:lkang_crab_CMSDAS_MC_generation_test0
+								SUBMITTED
+INFO 2016-06-27 16:40:32,807: 	 --------------------------------------------------------------------------------
+INFO 2016-06-27 16:40:32,807: 	 
+
+INFO 2016-06-27 16:40:32,811: 	 Log file is /afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/tests/crab.log

@@ -1,0 +1,32 @@
+DEBUG 2016-06-27 16:32:12,014: 	 Executing command: 'submit'
+DEBUG 2016-06-27 16:32:12,016: 	 Found CRAB cache file /afs/cern.ch/user/l/lkang/.crab3
+DEBUG 2016-06-27 16:32:12,042: 	 Checking credentials
+DEBUG 2016-06-27 16:32:12,043: 	 Found proxy file /tmp/x509up_u93955
+DEBUG 2016-06-27 16:32:12,043: 	 Getting proxy life time left
+DEBUG 2016-06-27 16:32:12,757: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -timeleft
+ output : 80258
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:32:13,375: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93955 -actimeleft
+ output : 80257
+
+ error: 
+ retcode : 0
+DEBUG 2016-06-27 16:32:13,376: 	 Proxy valid for 22:17:38 hours
+ERROR 2016-06-27 16:32:13,376: 	 CRAB configuration file crabConfig.py not found.
+ERROR 2016-06-27 16:32:13,377: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 295, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1606-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 46, in loadConfig
+    raise ConfigurationException("CRAB configuration file %s not found." % (configname))
+ConfigurationException: CRAB configuration file crabConfig.py not found.
