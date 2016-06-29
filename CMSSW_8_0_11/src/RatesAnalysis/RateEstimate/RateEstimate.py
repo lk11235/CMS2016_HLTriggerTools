@@ -32,7 +32,10 @@ if batchSplit:
 #folder = '/store/group/dpg_trigger/comm_trigger/TriggerStudiesGroup/STEAM/Spring15/Hui_HLTRates_2e33_25ns_V4p4_V1'
 #folder = '/afs/cern.ch/user/v/vannerom/eos/cms/store/group/dpg_trigger/comm_trigger/TriggerStudiesGroup/STEAM/Spring15/Hui_HLTRates_2e33_25ns_V4p4_V1_last_round_perhaps'
 #folder = '/store/group/dpg_trigger/comm_trigger/TriggerStudiesGroup/STEAM/Run2016B/HLTPhysics_HLTRates_GRunV97_unprescaled_Run2016_run273725'
-folder = '/afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/crabjobs/HLTPhysics_Run274998/HLTPhysics'
+#folder = '/afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/crabjobs/HLTPhysics_Run274998/HLTPhysics'
+folder = '/afs/cern.ch/user/l/lkang/diphoton/rate_tests/CMSSW_8_0_11/src/crabjobs/HLTPhysics_Run274998/HLTPhysics/HLTPhysics/160628_100015/'#0000/'
+#folder = '/eos/uscms/store/user/lkang/HLTPhysics_Run274998/HLTPhysics'
+#folder = '/eos'
 lumi = 1              # luminosity [s-1cm-2]
 if (batchSplit): multiprocess = 1           # number of processes
 else: multiprocess = 1 # 8 multiprocessing disbaled for now because of incompatibilities with the way the files are accessed. Need some development.
@@ -87,8 +90,9 @@ import os
 import shlex
 import subprocess
 import json
+from subprocess import call
 
-ROOT.TFormula.SetMaxima(10000,10000,10000) # Allows to extend the number of operators in a root TFormula. Needed to evaluate the .Draw( ,OR string) in the GetEvents function
+#ROOT.TFormula.SetMaxima(10000,10000,10000) # Allows to extend the number of operators in a root TFormula. Needed to evaluate the .Draw( ,OR string) in the GetEvents function
 
 ##### Function definition #####
 
@@ -111,15 +115,17 @@ def lsl(file_or_path,my_filelist):
     An exception of type IOError will be raised in case file/directory does not exist.
     '''
 
+    realpath = file_or_path + '/'
     directory = os.path.dirname(file_or_path)
-    ls_command = runCommand('%s ls -l %s' % (executable_eos, file_or_path))
+    command = 'ls -ahl'
+    ls_command = runCommand('ls -ahl ' + file_or_path)  #% (executable_eos, realpath))
 
     stdout, stderr = ls_command.communicate()
     #print "stdout = ", stdout
     status = ls_command.returncode
     #print "status = ", status
     if status != 0:
-        raise IOError("File/path = %s does not exist !!" % file_or_path)
+        pass #raise IOError("File/path = %s does not exist !!" % file_or_path)
     
     retVal = []
     for line in stdout.splitlines():
@@ -128,7 +134,7 @@ def lsl(file_or_path,my_filelist):
             continue
         file_info = {
             'permissions' : fields[0],
-            'size' : int(fields[4]),
+            'size' : fields[4],
             'file' : fields[8]
         }
         time_stamp = " ".join(fields[5:8])
@@ -153,6 +159,8 @@ def lsl(file_or_path,my_filelist):
         #print "is dir: ", isdir
         #print "file_info =", file_info
         if isdir and not 'log' in tmp_path:
+            print file_info['path']
+            print file_info['file']
             lsl(file_info['path']+'/'+file_info['file'],my_filelist)
     return
 
@@ -209,7 +217,7 @@ def getPrescaleListInNtuples():
         datasetName = dataset
         noRootFile = True
         onlyFail = False
-        walking_folder = folder+"/"+datasetName
+        walking_folder = folder+datasetName
         eosDirContent = []
         lsl(walking_folder,eosDirContent)
         for key in eosDirContent:
@@ -381,7 +389,7 @@ def CompareGRunVsGoogleDoc(datasetList,triggerList,folder):
         datasetName = dataset
         noRootFile = True
         onlyFail = False
-        walking_folder = folder+"/"+datasetName
+        walking_folder = folder #+ '/HLTPhysics/' #+"/"+datasetName
         eosDirContent = []
         lsl(walking_folder,eosDirContent)
         for key in eosDirContent:
@@ -396,7 +404,8 @@ def CompareGRunVsGoogleDoc(datasetList,triggerList,folder):
                 break
         if len(filenames)>0: break 
     if len(filenames)==0:
-        raise ValueError('No good file found in '+folder)
+	error = 'No good file found in ' + str(folder)
+        raise ValueError(error) #'No good file found in ' + folder)
     
     for filename in filenames:
         if 'hltbit' in filename: break
@@ -864,7 +873,11 @@ triggerAndGroupList=[]
 #if not evalL1: groupList.remove('L1')
 #if not evalHLTpaths : groupList.remove('All_HLT')
 if looping: groupList.remove('All_HLT_aliases')
-else: groupList.remove('All_HLT_paths')
+else: 
+	try:
+		groupList.remove('All_HLT_paths')
+	except:
+		pass
 if evalHLTpaths:
     HLTList = CompareGRunVsGoogleDoc(datasetList,HLTList,folder)
     triggerAndGroupList=triggerAndGroupList+HLTList
