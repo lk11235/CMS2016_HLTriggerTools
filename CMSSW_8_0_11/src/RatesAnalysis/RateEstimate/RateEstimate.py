@@ -979,18 +979,58 @@ if batchSplit:
         pass
 
     ### write files with events count
-    if evalL1: writeMatrixEvents(filename+'_L1_matrixEvents_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',datasetList,L1List,totalEventsMatrix,passedEventsMatrix,True,False)
-    if evalHLTpaths: writeMatrixEvents(filename+'_matrixEvents_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',datasetList,HLTList,totalEventsMatrix,passedEventsMatrix,True,True)
-    if evalHLTprimaryDatasets: writeMatrixEvents(filename+'_matrixEvents.primaryDataset_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',datasetList,primaryDatasetList,totalEventsMatrix,passedEventsMatrix)
-    if evalHLTgroups: writeMatrixEvents(filename+'_matrixEvents.groups_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',datasetList,groupList,totalEventsMatrix,passedEventsMatrix)
-    if evalHLTtwogroups: writeMatrixEvents(filename+'_matrixEvents.twogroups_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',datasetList,twoGroupsList,totalEventsMatrix,passedEventsMatrix)
+    if evalL1: 
+        try: 
+            writeMatrixEvents(filename+'_L1_matrixEvents_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',datasetList,L1List,totalEventsMatrix,passedEventsMatrix,True,False) 
+        except: 
+            pass
+    if evalHLTpaths: 
+        try: 
+            writeMatrixEvents(filename+'_matrixEvents_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',datasetList,HLTList,totalEventsMatrix,passedEventsMatrix,True,True) 
+        except: 
+            pass
+    if evalHLTprimaryDatasets: 
+        try: 
+            writeMatrixEvents(filename+'_matrixEvents.primaryDataset_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',datasetList,primaryDatasetList,totalEventsMatrix,passedEventsMatrix) 
+        except: 
+            pass
+    if evalHLTgroups: 
+        try: 
+            writeMatrixEvents(filename+'_matrixEvents.groups_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',datasetList,groupList,totalEventsMatrix,passedEventsMatrix) 
+        except: 
+            pass
+    if evalHLTtwogroups: 
+        try: 
+            writeMatrixEvents(filename+'_matrixEvents.twogroups_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',datasetList,twoGroupsList,totalEventsMatrix,passedEventsMatrix) 
+        except: 
+            pass
 
     ### write files with  trigger rates
-    if evalL1:writeMatrixRates(filename+'_L1_matrixRates_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',prescaleList,datasetList,rateTriggerDataset,rateTriggerTotal,L1List,True,False)
-    if evalHLTpaths: writeMatrixRates(filename+'_matrixRates_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',prescaleList,datasetList,rateTriggerDataset,rateTriggerTotal,HLTList,True,True)
-    if evalHLTprimaryDatasets: writeMatrixRates(filename+'_matrixRates.primaryDataset_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',prescaleList,datasetList,rateTriggerDataset,rateTriggerTotal,primaryDatasetList)
-    if evalHLTgroups: writeMatrixRates(filename+'_matrixRates.groups_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',prescaleList,datasetList,rateTriggerDataset,rateTriggerTotal,groupList)
-    if evalHLTtwogroups: writeMatrixRates(filename+'_matrixRates.twogroups_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',prescaleList,datasetList,rateTriggerDataset,rateTriggerTotal,twoGroupsList)
+    if evalL1: 
+        try: 
+            writeMatrixRates(filename+'_L1_matrixRates_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',prescaleList,datasetList,rateTriggerDataset,rateTriggerTotal,L1List,True,False) 
+        except: 
+            pass
+    if evalHLTpaths: 
+        try: 
+            writeMatrixRates(filename+'_matrixRates_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',prescaleList,datasetList,rateTriggerDataset,rateTriggerTotal,HLTList,True,True) 
+        except: 
+            pass
+    if evalHLTprimaryDatasets: 
+        try: 
+            writeMatrixRates(filename+'_matrixRates.primaryDataset_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',prescaleList,datasetList,rateTriggerDataset,rateTriggerTotal,primaryDatasetList) 
+        except: 
+            pass
+    if evalHLTgroups: 
+        try: 
+            writeMatrixRates(filename+'_matrixRates.groups_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',prescaleList,datasetList,rateTriggerDataset,rateTriggerTotal,groupList) 
+        except: 
+            pass
+    if evalHLTtwogroups: 
+        try: 
+            writeMatrixRates(filename+'_matrixRates.twogroups_'+str(options.datasetName)+'_'+str(options.fileNumber)+'.tsv',prescaleList,datasetList,rateTriggerDataset,rateTriggerTotal,twoGroupsList) 
+        except: 
+            pass
 
 else:
     try:
@@ -1017,9 +1057,10 @@ else:
 ## print timing
 endGlobal = time.time()
 totalEvents = 0
-for dataset in datasetList: totalEvents+=totalEventsMatrix[dataset]
+for dataset in datasetList: 
+    try:
+        totalEvents+=totalEventsMatrix[dataset]
+    except:
+        pass
 print
-print "Total Time=",round((endGlobal - startGlobal),2)," Events=",totalEvents," TimePer10kEvent=", round((endGlobal - startGlobal)*10000/totalEvents,2)
-
-
-
+print "Total Time =",round((endGlobal - startGlobal),2)," Events =",totalEvents," TimePer10kEvent =",round((endGlobal - startGlobal)*10000,2),'/ totalEvents'
