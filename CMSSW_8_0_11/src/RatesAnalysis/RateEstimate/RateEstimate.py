@@ -159,8 +159,7 @@ def lsl(file_or_path,my_filelist):
         #print "is dir: ", isdir
         #print "file_info =", file_info
         if isdir and not 'log' in tmp_path:
-            print file_info['path']
-            print file_info['file']
+            print file_info['path'] + file_info['file']
             lsl(file_info['path']+'/'+file_info['file'],my_filelist)
     return
 
@@ -202,7 +201,7 @@ def test_CL(p,n):
 
 ## get the trigger list from the ntuples
 def getTriggersListFromNtuple(chain,triggerListInNtuples):
-            for leaf in chain.GetListOfLeaves():
+           for leaf in chain.GetListOfLeaves():
                name = leaf.GetName()
                if (("HLT_" in name) or (evalL1 and ("L1_" in name))) and not ("Prescl" in name):
                 triggerListInNtuples.append(name)
@@ -217,16 +216,21 @@ def getPrescaleListInNtuples():
         datasetName = dataset
         noRootFile = True
         onlyFail = False
-        walking_folder = folder+datasetName
-        eosDirContent = []
+        walking_folder = folder#+datasetName
+        #print walking_folder
+	eosDirContent = []
         lsl(walking_folder,eosDirContent)
         for key in eosDirContent:
             if (("failed" in str(key['path'])) or ("log" in str(key['path']))):
                 onlyFail = True
                 continue
             elif ("root" in str(key['file'])):
-                filenames.append("root://eoscms//eos/cms"+str(key['path'])+'/'+str(key['file']))
-                dirpath = "root://eoscms//eos/cms/"+walking_folder
+                #filenames.append("root://eoscms//eos/cms"+
+                filenames.append(str(key['path'])+'/'+str(key['file']))
+                #dirpath = "root://eoscms//eos/cms/"+walking_folder
+                dirpath = walking_folder
+		#filenames.append("root://eoscms//eos/cms"+str(key['path'])+'/'+str(key['file']))
+                #dirpath = "root://eoscms//eos/cms/"+walking_folder
                 noRootFile = False
                 onlyFail = False
                 break
@@ -392,14 +396,17 @@ def CompareGRunVsGoogleDoc(datasetList,triggerList,folder):
         walking_folder = folder #+ '/HLTPhysics/' #+"/"+datasetName
         eosDirContent = []
         lsl(walking_folder,eosDirContent)
+	print '\nfound dataset in above directory\n'
         for key in eosDirContent:
             if (("failed" in str(key['path'])) or ("log" in str(key['path']))):
                 onlyFail = True
                 continue
             elif ("root" in str(key['file'])):
-                filenames.append("root://eoscms//eos/cms"+str(key['path'])+'/'+str(key['file']))
-                dirpath = "root://eoscms//eos/cms/"+walking_folder
-                noRootFile = False
+                #filenames.append("root://eoscms//eos/cms"+
+                filenames.append(str(key['path'])+'/'+str(key['file']))
+                #dirpath = "root://eoscms//eos/cms/"+walking_folder
+                dirpath = walking_folder
+		noRootFile = False
                 onlyFail = False
                 break
         if len(filenames)>0: break 
@@ -408,11 +415,15 @@ def CompareGRunVsGoogleDoc(datasetList,triggerList,folder):
         raise ValueError(error) #'No good file found in ' + folder)
     
     for filename in filenames:
+	print 'checking files\n'
         if 'hltbit' in filename: break
     
-    _file0 = ROOT.TFile.Open(filename)
+    print 'opening file\n' + filename
+    f = ROOT.TFile.Open(filename)
+    print 'opened file\n'
     chain = ROOT.gDirectory.Get("HltTree")
-    
+    print 'got tree\n'   
+ 
     # get trigger bits and make a comparison with google DOC
     triggerListInNtuples = []
     getTriggersListFromNtuple(chain,triggerListInNtuples)
@@ -655,14 +666,18 @@ def fillMatrixAndRates(dataset,totalEventsMatrix,passedEventsMatrix,rateTriggerD
     dirpath=''
     filenames=[]
     noRootFile = True
-    walking_folder = folder+"/"+dataset
+    walking_folder = folder#+"/"+dataset
     eosDirContent=[]
     lsl(walking_folder,eosDirContent)
     for key in eosDirContent:
         if (("failed" in str(key['path'])) or ("log" in str(key['file']))): continue
         if (".root" in str(key['file'])):
-            filenames.append("root://eoscms//eos/cms"+str(key['path'])+'/'+str(key['file']))
-            dirpath = "root://eoscms//eos/cms"+walking_folder
+            #filenames.append("root://eoscms//eos/cms"+
+            filenames.append(str(key['path'])+'/'+str(key['file']))
+            #dirpath = "root://eoscms//eos/cms/"+walking_folder
+            dirpath = walking_folder
+            #filenames.append("root://eoscms//eos/cms"+str(key['path'])+'/'+str(key['file']))
+            #dirpath = "root://eoscms//eos/cms"+walking_folder
             noRootFile = False
  
     ## print an error if a dataset is missing
@@ -879,10 +894,14 @@ else:
 	except:
 		pass
 if evalHLTpaths:
+    print 'evalHLTpaths\n'
     HLTList = CompareGRunVsGoogleDoc(datasetList,HLTList,folder)
+    print 'built hlt list\n'
     triggerAndGroupList=triggerAndGroupList+HLTList
 if evalL1:              
+    print '\nevalL1\n'
     L1List = CompareGRunVsGoogleDoc(datasetList,L1List,folder)
+    print '\nbuilt L1 list\n'
     triggerAndGroupList=triggerAndGroupList+L1List
 
 if evalHLTprimaryDatasets: triggerAndGroupList=triggerAndGroupList+primaryDatasetList
