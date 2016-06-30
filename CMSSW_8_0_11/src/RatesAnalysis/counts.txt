@@ -1,0 +1,6 @@
+Trigger Name                                                         Trigger Count
+-------------------------------------------------------------------  ---------------
+HLT_DoubleJetsC100_DoubleBTagCSV_p014_DoublePFJetsC100MaxDeta1p6_v2  7.23E-05 events
+HLT_DoubleJetsC100_DoubleBTagCSV_p026_DoublePFJetsC160_v2            7.23E-05 events
+HLT_PFJet80_v5                                                       4.34E-04 events
+HLT_DiPFJetAve80_v3                                                  2.17E-04 events
