@@ -2,9 +2,11 @@
 
 # Primitive tool to get the count of an unprescaled trigger
 # 
-# Input: list of trigger names for which to get the counts, list of all directories where histograms ("hltbits*.root", by default) reside.
-# Output: a dictionary containing trigger names as values and respective counts as keys.
-#
+# Input: list of trigger names for which to get the counts, list of the directory where root files ("hltbits*.root", by default) reside.
+# 	 calculateRates -- boolean variable specifying whether to compute the rates from counts,
+# 	 L1 rate corresponding to the run from which the events come
+# Output: a dictionary containing trigger names as values and respective counts as keys, and a csv file
+# 	  a dictionary containing trigger names as values and respective counts as rates, and a csv file
 # Description:
 ## Count for a trigger is calculated as (N accepted events / N total events). 
 ##
@@ -53,6 +55,12 @@ dataset_directory = "/afs/cern.ch/user/a/aavkhadi/commissioning_trigger_bjet/rat
 ## Specify a filter for finding *.root files in the directory (and subdirectories)
 events_file_filter = "hltbits*.root"
 
+# Calculate rates from counts? Need l1 Rate corresponding to the run from which the events come 
+calculate_rates = True
+
+# L1 rate corresponding to the run from which the events come, in Hz
+l1_rate = 78406.969
+
 ## Create a dictionary of all accepted events, events_accepted
 ### trigger names from the list as keys, and 0 as values. 
 events_accepted = dict.fromkeys(trigger_list, 0)
@@ -96,19 +104,30 @@ try:
 			print ("Number of events accepted by the trigger in the file is "+ str(accepted_by_trigger_in_file))
 			events_accepted[trigger_name] += accepted_by_trigger_in_file
 	
-	print ("Total number of events is " + str(events_total)
+	print ("Total number of events is " + str(events_total))
 	## Loop over the counts dictionary. Compute the count for a given trigger as the respective value from events_accepted divided by event_total. 
 	if events_total != 0:
 		counts_writeout = csv.writer(open('counts.csv', 'wb'))	
 		print "Writing the counts in a file counts.csv..."
-		for trigger_name, count in counts.items():
-                	count = events_accepted[trigger_name]/events_total
+		for trigger_name in trigger_list:
+                	counts[trigger_name] = events_accepted[trigger_name]/events_total
                 	# Print out the counts dictionary, display in scientific notation
 			# see http://stackoverflow.com/questions/6913532/display-a-decimal-in-scientific-notation
-                	count_display = '%.2E' % Decimal(str(count))
+                	count_display = '%.2E' % Decimal(str(counts[trigger_name]))
 			counts_writeout.writerow([trigger_name, count_display])	
 	elif events_total == 0:
         	err_noevents = "Couldn't find any events" 
         	print err_noevents
+
+	if calculate_rates:
+		rates = dict.fromkeys(trigger_list, None)
+		print rates
+		print ("Calculating the corresponding rates. Using the formula rate = l1_rate * count. \nFor this run, l1_rate is " + str(l1_rate) + " Hz")
+		rates_writeout = csv.writer(open('rates.csv','wb'))
+		print "Writing the rates in a file rates.csv..."
+		for trigger_name in trigger_list:
+			rates[trigger_name] = counts[trigger_name] * l1_rate
+			rate_display = '%.3E' % Decimal(str(rates[trigger_name])) + " Hz"
+			rates_writeout.writerow([trigger_name, rate_display])
 except:
 	print "Something went wrong when going through *.root files"
