@@ -91,7 +91,7 @@ try:
 		print "Writing the counts in a file counts.txt..."
 		for trigger_name in trigger_list:
                 	counts[trigger_name] = events_accepted[trigger_name]/events_total
-                	count_display = '%.2E' % Decimal(str(counts[trigger_name])) + " events"
+                	count_display = '%.2E' % Decimal(str(counts[trigger_name])) + " count"
 			counts_table.append([trigger_name, count_display])
 			#counts_writeout.writerow([trigger_name, " | ", count_display])
 		counts_print = tabulate(counts_table, headers=["Trigger Name","Trigger Count"])
