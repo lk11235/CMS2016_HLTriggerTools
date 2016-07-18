@@ -1,0 +1,6 @@
+Trigger Name                                                         Trigger Rate
+-------------------------------------------------------------------  --------------
+HLT_DoubleJetsC100_DoubleBTagCSV_p014_DoublePFJetsC100MaxDeta1p6_v2  5.668E+00 Hz
+HLT_DoubleJetsC100_DoubleBTagCSV_p026_DoublePFJetsC160_v2            5.668E+00 Hz
+HLT_PFJet80_v5                                                       3.401E+01 Hz
+HLT_DiPFJetAve80_v3                                                  1.700E+01 Hz

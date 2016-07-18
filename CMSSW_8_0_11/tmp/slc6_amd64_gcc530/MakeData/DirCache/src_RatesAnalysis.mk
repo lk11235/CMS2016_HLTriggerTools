@@ -1,0 +1,2 @@
+ALL_SUBSYSTEMS+=RatesAnalysis
+subdirs_src_RatesAnalysis = src_RatesAnalysis_TriggerRatesAnalyzer src_RatesAnalysis_RateEstimate
