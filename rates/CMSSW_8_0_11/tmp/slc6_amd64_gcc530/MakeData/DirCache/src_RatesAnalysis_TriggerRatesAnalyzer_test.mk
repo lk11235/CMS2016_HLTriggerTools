@@ -1,0 +1,3 @@
+ALL_COMMONRULES += src_RatesAnalysis_TriggerRatesAnalyzer_test
+src_RatesAnalysis_TriggerRatesAnalyzer_test_parent := RatesAnalysis/TriggerRatesAnalyzer
+src_RatesAnalysis_TriggerRatesAnalyzer_test_INIT_FUNC += $$(eval $$(call CommonProductRules,src_RatesAnalysis_TriggerRatesAnalyzer_test,src/RatesAnalysis/TriggerRatesAnalyzer/test,TEST))

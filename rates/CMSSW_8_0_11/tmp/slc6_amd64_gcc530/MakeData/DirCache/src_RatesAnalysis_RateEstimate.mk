@@ -1,0 +1,2 @@
+ALL_PACKAGES += RatesAnalysis/RateEstimate
+subdirs_src_RatesAnalysis_RateEstimate := src_RatesAnalysis_RateEstimate_scripts

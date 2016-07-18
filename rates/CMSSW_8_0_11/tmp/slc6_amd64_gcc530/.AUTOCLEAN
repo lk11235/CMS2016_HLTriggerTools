@@ -1,0 +1,5 @@
+
+/bin/rm -f lib/slc6_amd64_gcc530/pluginATriggerRatesAnalyzer.so lib/slc6_amd64_gcc530/ATriggerRatesAnalyzer.edmplugin
+/bin/rm -rf tmp/slc6_amd64_gcc530/edmplugins/poison/A/TriggerRatesAnalyzer
+/bin/touch tmp/common/cache/packs/changed
+edmPluginRefresh lib/slc6_amd64_gcc530

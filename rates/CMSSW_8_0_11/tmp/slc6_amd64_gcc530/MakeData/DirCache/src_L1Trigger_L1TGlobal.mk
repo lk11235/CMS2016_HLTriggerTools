@@ -1,0 +1,2 @@
+ALL_PACKAGES += L1Trigger/L1TGlobal
+subdirs_src_L1Trigger_L1TGlobal := src_L1Trigger_L1TGlobal_src src_L1Trigger_L1TGlobal_test src_L1Trigger_L1TGlobal_scripts src_L1Trigger_L1TGlobal_python src_L1Trigger_L1TGlobal_plugins
