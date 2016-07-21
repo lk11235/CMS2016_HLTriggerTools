@@ -1,2 +1,0 @@
-ALL_PACKAGES += FastSimulation/Muons
-subdirs_src_FastSimulation_Muons := src_FastSimulation_Muons_python src_FastSimulation_Muons_plugins

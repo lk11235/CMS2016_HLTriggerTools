@@ -1,4 +1,0 @@
-plugin-poisoned-FastSimulationMuonsPlugins.so FastTSGFromIOHit TrackerSeedGeneratorFactory
-plugin-poisoned-FastSimulationMuonsPlugins.so FastTSGFromL2Muon CMS%EDM%Framework%Module
-plugin-poisoned-FastSimulationMuonsPlugins.so FastTSGFromL2Muon CMS%EDM%Framework%ParameterSet%Description
-plugin-poisoned-FastSimulationMuonsPlugins.so FastTSGFromPropagation TrackerSeedGeneratorFactory

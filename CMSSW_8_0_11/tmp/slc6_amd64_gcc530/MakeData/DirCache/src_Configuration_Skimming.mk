@@ -1,2 +1,0 @@
-ALL_PACKAGES += Configuration/Skimming
-subdirs_src_Configuration_Skimming := src_Configuration_Skimming_python src_Configuration_Skimming_src src_Configuration_Skimming_test

@@ -1,2 +1,0 @@
-ALL_SUBSYSTEMS+=Configuration
-subdirs_src_Configuration = src_Configuration_HLT src_Configuration_AlCa src_Configuration_Skimming

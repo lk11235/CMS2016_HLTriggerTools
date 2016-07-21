@@ -1,4 +1,0 @@
-tmp/slc6_amd64_gcc530/src/Configuration/Skimming/src/ConfigurationSkimming/LeptonRecoSkim.o: \
- src/Configuration/Skimming/src/LeptonRecoSkim.cc \
- src/Configuration/Skimming/interface/LeptonRecoSkim.h \
-

@@ -1,2 +1,0 @@
-ALL_PACKAGES += HLTrigger/Configuration
-subdirs_src_HLTrigger_Configuration := src_HLTrigger_Configuration_scripts src_HLTrigger_Configuration_test src_HLTrigger_Configuration_python

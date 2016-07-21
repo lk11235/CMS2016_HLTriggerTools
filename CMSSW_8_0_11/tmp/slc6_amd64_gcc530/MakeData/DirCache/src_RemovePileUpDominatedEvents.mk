@@ -1,2 +1,0 @@
-ALL_SUBSYSTEMS+=RemovePileUpDominatedEvents
-subdirs_src_RemovePileUpDominatedEvents = 

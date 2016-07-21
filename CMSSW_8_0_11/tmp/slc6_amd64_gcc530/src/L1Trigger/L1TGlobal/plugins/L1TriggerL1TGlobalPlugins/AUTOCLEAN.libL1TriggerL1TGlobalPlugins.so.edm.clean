@@ -1,2 +1,0 @@
-01:/bin/rm -f lib/slc6_amd64_gcc530/pluginL1TriggerL1TGlobalPlugins.so lib/slc6_amd64_gcc530/L1TriggerL1TGlobalPlugins.edmplugin
-90:edmPluginRefresh lib/slc6_amd64_gcc530

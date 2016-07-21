@@ -1,2 +1,0 @@
-ALL_SUBSYSTEMS+=HLTrigger
-subdirs_src_HLTrigger = src_HLTrigger_HLTanalyzers src_HLTrigger_Configuration

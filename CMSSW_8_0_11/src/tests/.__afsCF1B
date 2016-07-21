@@ -1,4 +1,0 @@
-  File "multicrab.py", line 19
-    from CRABAPI.RawCommand import crabCommand
-       ^
-IndentationError: expected an indented block
